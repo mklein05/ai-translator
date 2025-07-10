@@ -10,7 +10,7 @@ import os
 from pathlib import Path
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
-
+from fastapi.responses import FileResponse
 
 # Get the current directory
 current_dir = Path(__file__).parent
@@ -21,7 +21,6 @@ app = FastAPI()
 # Serve static files (HTML/CSS/JS)
 current_dir = Path(__file__).parent
 app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
 
 class TranslationRequest(BaseModel):
     text: str
@@ -60,6 +59,6 @@ async def translate(request: TranslationRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/", response_class=HTMLResponse)
-async def read_root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+@app.get("/")
+async def read_root():
+    return FileResponse("static/index.html")
