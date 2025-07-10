@@ -19,7 +19,8 @@ load_dotenv()
 app = FastAPI()
 
 # Serve static files (HTML/CSS/JS)
-app.mount("/static", StaticFiles(directory=current_dir/"static"), name="static")
+current_dir = Path(__file__).parent
+app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 class TranslationRequest(BaseModel):
