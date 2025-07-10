@@ -8,6 +8,9 @@ from fastapi.responses import HTMLResponse
 from dotenv import load_dotenv
 import os
 from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
+
 
 # Get the current directory
 current_dir = Path(__file__).parent
@@ -16,7 +19,7 @@ load_dotenv()
 app = FastAPI()
 
 # Serve static files (HTML/CSS/JS)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory=current_dir/"static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 class TranslationRequest(BaseModel):
