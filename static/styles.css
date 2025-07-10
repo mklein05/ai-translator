@@ -1,0 +1,116 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#text, #output{
+    width: 500px;
+    height: 200px;
+    border: 4px solid black;
+    background-color: white;
+    resize: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+content{
+    display: flex;
+    border: 5px solid black;
+    padding: 6rem;
+    border-radius: 2rem;
+    background-color: lightgray;
+    width: 100vw;
+    justify-content: center;
+}
+
+#inputdiv, #outputdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+p{
+    margin: 0;
+}
+
+h1{
+    font-size: 5rem;
+    margin: 1rem;
+}
+
+p{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: black;
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+option, select, label{
+    font-size: 2rem;
+}
+
+select{
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid black;
+    appearance: none;
+    color: grey;    
+}
+
+select:hover, #translateBtn:hover{
+    cursor: pointer;
+}
+
+#translateBtn{
+    font-size: 2.5rem;
+    background-color: black;
+    border: 5px solid white;
+    color: white;
+    border-radius: 0.8rem;
+    padding: 1rem;
+
+}
+
+#buttonsdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#tonediv{
+    margin-bottom: 6rem;
+}
+
+#text, #output{
+    font-size: 2rem;
+}
+
+content{
+    margin: 6rem;
+}
+
+.selectioncontainer{
+    margin-bottom: 2rem;
+}
+
+header{
+    background-color: black;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

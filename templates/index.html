@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Translator</title>
+    <link rel = "stylesheet" href = "/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 AI Translator 🤖</h1>
+    </header>
+
+    <p> This AI-Powered Translator uses Google Gemini to translate your text into a target language in a casual or formal tone!</p>
+    <content>
+    <div id = "inputdiv">
+    <div class = "selectioncontainer">
+        <label for="input_lang">From</label>
+        <select id="input_lang">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+        </select>
+        <label for="input_lang"><label>
+    </div>
+
+    <textarea id="text" placeholder="Enter text..."></textarea>
+    </div>
+
+    <div id = "buttonsdiv">
+        <div id = "tonediv">
+            <label for="tone">In a </label>
+            <select id="tone">
+                <option value="formal">Formal</option>
+                <option value="casual">Casual</option>
+            </select>
+            <label for="tone">Tone</label>
+        </div>
+
+        <button id="translateBtn">Translate!</button>
+    </div>
+
+
+
+    <div id = "outputdiv">
+    <div class = "selectioncontainer">
+        <label for="output_lang">To</label>
+        <select id="output_lang">
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="Russian">Russian</option>
+        </select>
+    </div>
+    <div id="output"></div>
+    </div>
+
+    
+
+    
+    </content>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
