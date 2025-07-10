@@ -5,6 +5,11 @@ body{
     justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
+
+    padding: 0;
+}
+
+*{
     box-sizing: border-box;
 }
 
@@ -22,10 +27,13 @@ body{
 content{
     display: flex;
     border: 5px solid black;
+    border-left: none;
+    border-right: none;
     padding: 6rem;
-    border-radius: 2rem;
+    padding-right: 0;
+    padding-left: 0;
     background-color: lightgray;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
 }
 
